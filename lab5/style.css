@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f4f4f4;
+    height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 703px;
+    border: 2px solid #333;
+    background: white;
+}
+
+.left-column {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid #333;
+}
+
+.right-column {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.block-1 {
+    flex-grow: 1;
+    background-color: #ffe5cc;
+    padding: 20px;
+    border-bottom: 2px solid #333;
+}
+
+.block-2 {
+    height: 120px;
+    background-color: #ccd9f2;
+    border-bottom: 2px solid #333;
+    position: relative;
+}
+
+.block-3 {
+    height: 460px;
+    flex-grow: 1;
+    background-color: #fff;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.block-4 {
+    height: 118px;
+    background-color: #e6f2e6;
+    padding: 20px;
+}
+
+.block-5 {
+    height: 120px;
+    background-color: #ccd9f2;
+    border-top: 2px solid #333;
+    position: relative;
+}
+
+.box-x,
+.box-y {
+    position: absolute;
+    background: white;
+    border: 2px solid black;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 100px;
+}
+
+.box-x {
+    left: 20px;
+    top: 20px;
+}
+
+.box-y {
+    right: 20px;
+    bottom: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+a.active {
+    color: #d00;
+    text-decoration: underline;
+}
+
+button {
+    padding: 8px 15px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+button:hover {
+    background: #555;
+}
+
+button:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+
+
+#workLayer {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 100;
+}
+
+#controlsArea {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    border-bottom: 1px dashed #ccc;
+    background: #f9f9f9;
+}
+
+#msgArea {
+    font-size: 12px;
+    color: #333;
+    max-width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#animArea {
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    right: 5px;
+    top: 50px;
+    border: 5px solid green;
+    overflow: hidden;
+
+    background-image: repeating-linear-gradient(45deg,
+            #f0f0f0 25%,
+            transparent 25%,
+            transparent 75%,
+            #f0f0f0 75%,
+            #f0f0f0),
+        repeating-linear-gradient(45deg,
+            #f0f0f0 25%,
+            #fff 25%,
+            #fff 75%,
+            #f0f0f0 75%,
+            #f0f0f0);
+    background-position: 0 0, 16px 16px;
+    background-size: 32px 32px;
+}
+
+.anim-ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#resultTableContainer {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 10px;
+    display: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+th,
+td {
+    border: 1px solid #333;
+    padding: 4px;
+    text-align: left;
+}
+
+th {
+    background: #eee;
+}
